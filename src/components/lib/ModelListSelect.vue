@@ -2,7 +2,7 @@
   /* wrap basic component */
   import ModelSelect from './ModelSelect.vue'
   import { commonMixin } from './mixins'
-  
+
   export default {
     mixins: [commonMixin],
     render: function (createElement) {
@@ -16,6 +16,7 @@
         },
         on: {
           input: this.onInput,
+          blur: this.onBlur,
           searchchange: (searchText) => this.$emit('searchchange', searchText)
         }
       })
@@ -81,6 +82,9 @@
         } else if (typeof option === 'string') {
           this.$emit('input', option)
         }
+      },
+      onBlur () {
+        this.$emit('blur');
       }
     },
     components: {

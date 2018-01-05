@@ -7,6 +7,7 @@
     <input class="search"
            autocomplete="off"
            tabindex="0"
+           :placeholder="placeholder"
            v-model="searchText"
            ref="input"
            @focus.prevent="openOptions"
@@ -42,7 +43,7 @@
 <script>
   import common from './common'
   import { baseMixin, commonMixin } from './mixins'
-  
+
   export default {
     mixins: [baseMixin, commonMixin],
     props: {
@@ -173,7 +174,7 @@
   .ui.dropdown .menu > .item:hover {
     background: none transparent !important;
   }
-  
+
   /* Menu Item Hover for Key event */
   .ui.dropdown .menu > .item.current {
     background: rgba(0, 0, 0, 0.05) !important;
