@@ -20029,7 +20029,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    attrs: {
 	      "autocomplete": "off",
 	      "tabindex": "0",
-	      "placeholder": _vm.placeholder
+	      "placeholder": _vm.selectedOption ? '' : _vm.placeholder
 	    },
 	    domProps: {
 	      "value": _vm._s(_vm.searchText)

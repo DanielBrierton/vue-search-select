@@ -7,7 +7,7 @@
     <input class="search"
            autocomplete="off"
            tabindex="0"
-           :placeholder="placeholder"
+           :placeholder="selectedOption ? '' : placeholder"
            v-model="searchText"
            ref="input"
            @focus.prevent="openOptions"
